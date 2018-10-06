@@ -2,7 +2,6 @@ import React from 'react'
 import { createFragmentContainer, graphql } from 'react-relay'
 import { Box, BorderBox, StackableBorderBox } from '@artsy/palette'
 import { Responsive } from '../utils/Responsive'
-import { Toggle } from 'react-powerplug'
 
 export const Artist = createFragmentContainer(
   ({ artist }) => {
@@ -19,6 +18,7 @@ export const Artist = createFragmentContainer(
                 {sm && <StackableBorderBox>SM</StackableBorderBox>}
                 {md && <StackableBorderBox>MD</StackableBorderBox>}
                 {lg && <StackableBorderBox>LG</StackableBorderBox>}
+                <StackableBorderBox>Fallback</StackableBorderBox>
               </BorderBox>
             </Box>
           )
